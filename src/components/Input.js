@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Input } from 'semantic-ui-react'
-
+const style = {
+  borderRadius: 0
+}
 class InputForm extends Component {
   handleChange(e) {
     return this.props.change(e)
@@ -12,10 +14,11 @@ class InputForm extends Component {
     return(
       <div>
         <Input
+          style={style}
           id='input'
           icon='phone'
           iconPosition='left'
-          placeholder='Enter phone number!'
+          placeholder='Enter phone number'
           focus={true}
           action={{content: 'Sign up', color:'teal', onClick: ()=> this.handleClick()}}
           size='big'
